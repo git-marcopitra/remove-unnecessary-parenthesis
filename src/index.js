@@ -1,12 +1,11 @@
 const { getOpeners } = require("./get-openers");
-const { toCharArray } = require("./to-char-array");
 
 /**
  * @description PT: função para remover todos os parênteses desnecessários
  * @param {string} text
  */
 const removeParentheses = (text) => {
-  const textArray = toCharArray(text);
+  const textArray = text.split('');
   const openers = getOpeners(textArray);
   const closers = [];
 

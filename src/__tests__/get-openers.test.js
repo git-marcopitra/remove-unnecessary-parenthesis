@@ -1,7 +1,6 @@
 const { getOpeners } = require("../get-openers");
-const { toCharArray } = require("../to-char-array");
 
-const makeSut = (text) => getOpeners(toCharArray(text));
+const makeSut = (text) => getOpeners(text.split(''));
 
 describe("Get open parenthesis", () => {
   it("should return []", () => {
